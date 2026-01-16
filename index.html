@@ -2,13 +2,13 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Real8 Success</title>
+    <title>Real8 Final Success</title>
     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
 </head>
 <body style="background-color: #121212; color: white; text-align: center; padding-top: 100px;">
     <h1>Real8 플랫폼 가동</h1>
-    <button onclick="login()" style="padding: 15px 30px; cursor: pointer;">Google 로그인</button>
+    <button onclick="login()" style="padding: 15px 30px; cursor: pointer; font-size: 18px;">Google 로그인</button>
     <script>
         const config = {
             apiKey: "AIzaSyDPDh41Coju7dojq3ATISTxJDIiypx8eA0",
@@ -22,8 +22,8 @@
         function login() {
             const provider = new firebase.auth.GoogleAuthProvider();
             firebase.auth().signInWithPopup(provider)
-                .then((res) => { alert(res.user.displayName + "님 성공!"); })
-                .catch((err) => { alert("오류: " + err.message); });
+                .then((res) => { alert(res.user.displayName + "님, 환영합니다!"); })
+                .catch((err) => { alert("오류 메시지: " + err.message); });
         }
     </script>
 </body>
